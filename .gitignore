@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# Env / secrets
+.env
+
+# Playwright profiles (created in system temp, but ignore if any land here)
+cua-profile-*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NOTE: /artifacts and /evidence are committed on purpose -- they are deliverables.

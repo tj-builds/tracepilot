@@ -1,0 +1,25 @@
+{"seq": 1, "ts": "2026-09-16T19:31:04.862867+00:00", "event": "run_started", "run_kind": "discovery"}
+{"seq": 2, "ts": "2026-09-16T19:31:05.507950+00:00", "event": "goal", "goal": "look up member 100001 and read their current savings balance", "capability": "lookup_member_balance", "planner": "llm:openai"}
+{"seq": 3, "ts": "2026-09-16T19:31:05.795831+00:00", "event": "observe", "url": "http://127.0.0.1:5001/login", "title": "CoreCU Servicing", "n_controls": 3}
+{"seq": 4, "ts": "2026-09-16T19:31:10.410687+00:00", "event": "decide", "action": "type", "ref": "e0", "reason": "Enter the provided operator username.", "risk": "safe"}
+{"seq": 5, "ts": "2026-09-16T19:31:10.510985+00:00", "event": "observe", "url": "http://127.0.0.1:5001/login", "title": "CoreCU Servicing", "n_controls": 3}
+{"seq": 6, "ts": "2026-09-16T19:31:13.579701+00:00", "event": "decide", "action": "type", "ref": "#e1", "reason": "Enter the provided password to continue signing in.", "risk": "safe"}
+{"seq": 7, "ts": "2026-09-16T19:31:13.627700+00:00", "event": "observe", "url": "http://127.0.0.1:5001/login", "title": "CoreCU Servicing", "n_controls": 3}
+{"seq": 8, "ts": "2026-09-16T19:31:16.857789+00:00", "event": "decide", "action": "click", "ref": "e2", "reason": "Submit the provided credentials to access member servicing.", "risk": "safe"}
+{"seq": 9, "ts": "2026-09-16T19:31:17.030276+00:00", "event": "observe", "url": "http://127.0.0.1:5001/search", "title": "CoreCU Servicing", "n_controls": 2}
+{"seq": 10, "ts": "2026-09-16T19:31:19.424637+00:00", "event": "decide", "action": "type", "ref": "#e0", "reason": "Enter the provided member ID for lookup.", "risk": "safe"}
+{"seq": 11, "ts": "2026-09-16T19:31:19.456637+00:00", "event": "observe", "url": "http://127.0.0.1:5001/search", "title": "CoreCU Servicing", "n_controls": 2}
+{"seq": 12, "ts": "2026-09-16T19:31:21.775003+00:00", "event": "decide", "action": "click", "ref": "e1", "reason": "Search for member 100001.", "risk": "reversible"}
+{"seq": 13, "ts": "2026-09-16T19:31:21.918980+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001", "title": "CoreCU Servicing", "n_controls": 1}
+{"seq": 14, "ts": "2026-09-16T19:31:25.766328+00:00", "event": "decide", "action": "read", "ref": null, "reason": "The member detail page visibly shows the Savings balance value.", "risk": "safe"}
+{"seq": 15, "ts": "2026-09-16T19:31:25.802190+00:00", "event": "read", "output": "savings_balance", "value": "$1234.56"}
+{"seq": 16, "ts": "2026-09-16T19:31:25.821566+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001", "title": "CoreCU Servicing", "n_controls": 1}
+{"seq": 17, "ts": "2026-09-16T19:31:28.223355+00:00", "event": "decide", "action": "read", "ref": null, "reason": "The member page visibly shows the Savings balance value.", "risk": "safe"}
+{"seq": 18, "ts": "2026-09-16T19:31:28.243675+00:00", "event": "read", "output": "savings_balance", "value": "$1234.56"}
+{"seq": 19, "ts": "2026-09-16T19:31:28.260001+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001", "title": "CoreCU Servicing", "n_controls": 1}
+{"seq": 20, "ts": "2026-09-16T19:31:51.368188+00:00", "event": "decide", "action": "read", "ref": null, "reason": "The current member page visibly shows the Savings balance value.", "risk": "safe"}
+{"seq": 21, "ts": "2026-09-16T19:31:51.394894+00:00", "event": "read", "output": "savings_balance", "value": "$1234.56"}
+{"seq": 22, "ts": "2026-09-16T19:31:51.424260+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001", "title": "CoreCU Servicing", "n_controls": 1}
+{"seq": 23, "ts": "2026-09-16T19:32:02.064544+00:00", "event": "decide", "action": "done", "ref": null, "reason": "Savings balance for member 100001 is visible as $1234.56 and has been read.", "risk": "safe"}
+{"seq": 24, "ts": "2026-09-16T19:32:02.088367+00:00", "event": "goal_reached"}
+{"seq": 25, "ts": "2026-09-16T19:32:02.095367+00:00", "event": "run_finished", "outcome": "success", "capability": "lookup_member_balance"}

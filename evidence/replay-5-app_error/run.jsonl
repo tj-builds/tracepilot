@@ -1,0 +1,10 @@
+{"seq": 1, "ts": "2026-09-16T19:37:24.339989+00:00", "event": "run_started", "run_kind": "replay"}
+{"seq": 2, "ts": "2026-09-16T19:37:25.272976+00:00", "event": "fault_injected", "condition": "app_error"}
+{"seq": 3, "ts": "2026-09-16T19:37:25.284418+00:00", "event": "replay_started", "capability": "lookup_member_balance", "params": {"member_id": "100001", "username": "<redacted>", "password": "<redacted>"}}
+{"seq": 4, "ts": "2026-09-16T19:37:25.409403+00:00", "event": "step", "index": 0, "action": "navigate", "ok": true, "detail": "navigated to http://127.0.0.1:5001", "locator": null, "recovered_from": null}
+{"seq": 5, "ts": "2026-09-16T19:37:25.448451+00:00", "event": "step", "index": 1, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Username", "recovered_from": null}
+{"seq": 6, "ts": "2026-09-16T19:37:25.480996+00:00", "event": "step", "index": 2, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Password", "recovered_from": null}
+{"seq": 7, "ts": "2026-09-16T19:37:25.618688+00:00", "event": "step", "index": 3, "action": "click", "ok": true, "detail": "clicked", "locator": "[1/2:role] Sign in", "recovered_from": null}
+{"seq": 8, "ts": "2026-09-16T19:37:25.641340+00:00", "event": "step", "index": 4, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Member ID", "recovered_from": null}
+{"seq": 9, "ts": "2026-09-16T19:37:25.792555+00:00", "event": "step", "index": 5, "action": "click", "ok": false, "detail": "clicked", "locator": "[1/2:role] Search", "recovered_from": null}
+{"seq": 10, "ts": "2026-09-16T19:37:25.831842+00:00", "event": "run_finished", "outcome": "hard_failure", "failed_step": null, "expected": null, "observed": null, "message": "The application returned an internal error.", "screenshot": "evidence/replay-5-app_error/009-failure.png"}

@@ -1,0 +1,20 @@
+# Core
+pydantic>=2.6
+playwright>=1.44
+python-dotenv>=1.0
+
+# Target app + operator/catalog surfaces
+flask>=3.0
+fastapi>=0.110
+uvicorn>=0.29
+jinja2>=3.1
+
+# LLM provider (only needed for a real discovery run; replay never calls it)
+openai>=1.30
+
+# CLI + utils
+typer>=0.12
+rich>=13.7
+
+# Tests
+pytest>=8.0

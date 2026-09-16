@@ -1,0 +1,3 @@
+timestamp,change_type,member_id,account_type,deposit,reference
+2026-09-16T19:42:25.836461+00:00,open_subaccount,100001,savings,100.00,SA-100001-32458
+2026-09-16T19:58:55.678107+00:00,open_subaccount,100001,savings,100.00,SA-100001-32458

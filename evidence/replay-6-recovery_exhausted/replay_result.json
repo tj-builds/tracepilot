@@ -1,0 +1,81 @@
+{
+  "outcome": "recovery_exhausted",
+  "artifact_id": "lookup_member_balance-ae00cb58",
+  "artifact_version": 1,
+  "outputs": {},
+  "business_code": null,
+  "missing_inputs": [],
+  "message": "recovery for 'interstitial_notice' did not resolve after 2 attempts",
+  "failed_step": null,
+  "expected": null,
+  "observed": null,
+  "steps": [
+    {
+      "step_index": 0,
+      "action": "navigate",
+      "ok": true,
+      "detail": "navigated to http://127.0.0.1:5001",
+      "locator_used": null,
+      "rung": null,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 119
+    },
+    {
+      "step_index": 1,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Username",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 38
+    },
+    {
+      "step_index": 2,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Password",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 35
+    },
+    {
+      "step_index": 3,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Sign in",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 156
+    },
+    {
+      "step_index": 4,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Member ID",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 17
+    },
+    {
+      "step_index": 5,
+      "action": "click",
+      "ok": false,
+      "detail": "recovery for 'interstitial_notice' exhausted after 2 verified-failed attempts",
+      "locator_used": "[1/2:role] Search",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 462
+    }
+  ],
+  "evidence": {}
+}

@@ -1,0 +1,81 @@
+{
+  "outcome": "business_outcome",
+  "artifact_id": "lookup_member_balance-ae00cb58",
+  "artifact_version": 1,
+  "outputs": {},
+  "business_code": "member_not_found",
+  "missing_inputs": [],
+  "message": "The member ID was not found.",
+  "failed_step": null,
+  "expected": null,
+  "observed": "http://127.0.0.1:5001/member/000000",
+  "steps": [
+    {
+      "step_index": 0,
+      "action": "navigate",
+      "ok": true,
+      "detail": "navigated to http://127.0.0.1:5001",
+      "locator_used": null,
+      "rung": null,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 235
+    },
+    {
+      "step_index": 1,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Username",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 22
+    },
+    {
+      "step_index": 2,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Password",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 15
+    },
+    {
+      "step_index": 3,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Sign in",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 157
+    },
+    {
+      "step_index": 4,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Member ID",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 26
+    },
+    {
+      "step_index": 5,
+      "action": "click",
+      "ok": false,
+      "detail": "business outcome: member_not_found",
+      "locator_used": "[1/2:role] Search",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 150
+    }
+  ],
+  "evidence": {}
+}

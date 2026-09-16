@@ -1,0 +1,138 @@
+{
+  "outcome": "success",
+  "artifact_id": "open_subaccount-e4263016",
+  "artifact_version": 1,
+  "outputs": {
+    "confirmation_ref": "SA-100001-32458"
+  },
+  "business_code": null,
+  "missing_inputs": [],
+  "message": "checkpoint verified; goal reached",
+  "failed_step": null,
+  "expected": null,
+  "observed": null,
+  "steps": [
+    {
+      "step_index": 0,
+      "action": "navigate",
+      "ok": true,
+      "detail": "navigated to http://127.0.0.1:5001",
+      "locator_used": null,
+      "rung": null,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 673
+    },
+    {
+      "step_index": 1,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Username",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 76
+    },
+    {
+      "step_index": 2,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Password",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 60
+    },
+    {
+      "step_index": 3,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Sign in",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 307
+    },
+    {
+      "step_index": 4,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Member ID",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 51
+    },
+    {
+      "step_index": 5,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Search",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 365
+    },
+    {
+      "step_index": 6,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Open new sub-account",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 189
+    },
+    {
+      "step_index": 7,
+      "action": "select",
+      "ok": true,
+      "detail": "selected",
+      "locator_used": "[1/3:role] Account type",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 59
+    },
+    {
+      "step_index": 8,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Initial deposit",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 42
+    },
+    {
+      "step_index": 9,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Create sub-account",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 241
+    },
+    {
+      "step_index": 10,
+      "action": "read",
+      "ok": true,
+      "detail": "read confirmation_ref",
+      "locator_used": "[1/1:xpath] //td[normalize-space()='Reference']/following-sibling::td[1]",
+      "rung": null,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 23
+    }
+  ],
+  "evidence": {}
+}

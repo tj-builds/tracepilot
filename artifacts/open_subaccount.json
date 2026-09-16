@@ -1,0 +1,433 @@
+{
+  "schema_version": "1.0.0",
+  "id": "open_subaccount-e4263016",
+  "name": "open_subaccount",
+  "version": 1,
+  "description": "Open a new sub-account for a member and reach the confirmation screen.",
+  "goal": "open a new sub-account for member 100001 and reach the confirmation screen",
+  "target": {
+    "app_signature": "corecu-servicing",
+    "base_url": "http://127.0.0.1:5001",
+    "allowed_routes": [
+      "/",
+      "/login",
+      "/search",
+      "/member",
+      "/member/:member_id",
+      "/member/:member_id/ack",
+      "/member/:member_id/sub-account/new",
+      "/member/:member_id/sub-account/confirm"
+    ]
+  },
+  "params": [
+    {
+      "name": "username",
+      "type": "string",
+      "required": true,
+      "description": "Input parameter 'username'.",
+      "example": null,
+      "sensitive": true
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": true,
+      "description": "Input parameter 'password'.",
+      "example": null,
+      "sensitive": true
+    },
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "description": "Input parameter 'member_id'.",
+      "example": "100001",
+      "sensitive": false
+    },
+    {
+      "name": "account_type",
+      "type": "string",
+      "required": true,
+      "description": "Input parameter 'account_type'.",
+      "example": "savings",
+      "sensitive": false
+    },
+    {
+      "name": "deposit",
+      "type": "string",
+      "required": true,
+      "description": "Input parameter 'deposit'.",
+      "example": "100.00",
+      "sensitive": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "confirmation_ref",
+      "type": "string",
+      "description": "Extracted value for confirmation_ref.",
+      "source_step": 10
+    }
+  ],
+  "steps": [
+    {
+      "index": 0,
+      "action": "navigate",
+      "description": "navigate to http://127.0.0.1:5001",
+      "locator": null,
+      "value": null,
+      "route": "http://127.0.0.1:5001",
+      "output_name": null,
+      "key": null,
+      "risk": "safe",
+      "checkpoint": null
+    },
+    {
+      "index": 1,
+      "action": "type",
+      "description": "type into 'Username'",
+      "locator": {
+        "description": "Username",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Username",
+            "role": "textbox",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "label",
+            "value": "Username",
+            "role": null,
+            "rationale": "Associated <label> text; stable for form fields.",
+            "confidence": 0.8
+          },
+          {
+            "strategy": "css",
+            "value": "#u",
+            "role": null,
+            "rationale": "Element id; brittle if ids are generated, so ranked below semantic strategies.",
+            "confidence": 0.5
+          }
+        ]
+      },
+      "value": "{{username}}",
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "reversible",
+      "checkpoint": null
+    },
+    {
+      "index": 2,
+      "action": "type",
+      "description": "type into 'Password'",
+      "locator": {
+        "description": "Password",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Password",
+            "role": "textbox",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "label",
+            "value": "Password",
+            "role": null,
+            "rationale": "Associated <label> text; stable for form fields.",
+            "confidence": 0.8
+          },
+          {
+            "strategy": "css",
+            "value": "#pw",
+            "role": null,
+            "rationale": "Element id; brittle if ids are generated, so ranked below semantic strategies.",
+            "confidence": 0.5
+          }
+        ]
+      },
+      "value": "{{password}}",
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "reversible",
+      "checkpoint": null
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "description": "click 'Sign in'",
+      "locator": {
+        "description": "Sign in",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Sign in",
+            "role": "button",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "text",
+            "value": "Sign in",
+            "role": null,
+            "rationale": "Visible text fallback for buttons/links.",
+            "confidence": 0.4
+          }
+        ]
+      },
+      "value": null,
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "safe",
+      "checkpoint": null
+    },
+    {
+      "index": 4,
+      "action": "type",
+      "description": "type into 'Member ID'",
+      "locator": {
+        "description": "Member ID",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Member ID",
+            "role": "textbox",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "label",
+            "value": "Member ID",
+            "role": null,
+            "rationale": "Associated <label> text; stable for form fields.",
+            "confidence": 0.8
+          },
+          {
+            "strategy": "css",
+            "value": "#mid",
+            "role": null,
+            "rationale": "Element id; brittle if ids are generated, so ranked below semantic strategies.",
+            "confidence": 0.5
+          }
+        ]
+      },
+      "value": "{{member_id}}",
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "reversible",
+      "checkpoint": null
+    },
+    {
+      "index": 5,
+      "action": "click",
+      "description": "click 'Search'",
+      "locator": {
+        "description": "Search",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Search",
+            "role": "button",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "text",
+            "value": "Search",
+            "role": null,
+            "rationale": "Visible text fallback for buttons/links.",
+            "confidence": 0.4
+          }
+        ]
+      },
+      "value": null,
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "safe",
+      "checkpoint": null
+    },
+    {
+      "index": 6,
+      "action": "click",
+      "description": "click 'Open new sub-account'",
+      "locator": {
+        "description": "Open new sub-account",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Open new sub-account",
+            "role": "link",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "text",
+            "value": "Open new sub-account",
+            "role": null,
+            "rationale": "Visible text fallback for buttons/links.",
+            "confidence": 0.4
+          }
+        ]
+      },
+      "value": null,
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "safe",
+      "checkpoint": null
+    },
+    {
+      "index": 7,
+      "action": "select",
+      "description": "select '{{account_type}}' in 'Account type'",
+      "locator": {
+        "description": "Account type",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Account type",
+            "role": "combobox",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "label",
+            "value": "Account type",
+            "role": null,
+            "rationale": "Associated <label> text; stable for form fields.",
+            "confidence": 0.8
+          },
+          {
+            "strategy": "css",
+            "value": "#atype",
+            "role": null,
+            "rationale": "Element id; brittle if ids are generated, so ranked below semantic strategies.",
+            "confidence": 0.5
+          }
+        ]
+      },
+      "value": "{{account_type}}",
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "reversible",
+      "checkpoint": null
+    },
+    {
+      "index": 8,
+      "action": "type",
+      "description": "type into 'Initial deposit'",
+      "locator": {
+        "description": "Initial deposit",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Initial deposit",
+            "role": "textbox",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "label",
+            "value": "Initial deposit",
+            "role": null,
+            "rationale": "Associated <label> text; stable for form fields.",
+            "confidence": 0.8
+          },
+          {
+            "strategy": "css",
+            "value": "#dep",
+            "role": null,
+            "rationale": "Element id; brittle if ids are generated, so ranked below semantic strategies.",
+            "confidence": 0.5
+          }
+        ]
+      },
+      "value": "{{deposit}}",
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "reversible",
+      "checkpoint": null
+    },
+    {
+      "index": 9,
+      "action": "click",
+      "description": "click 'Create sub-account'",
+      "locator": {
+        "description": "Create sub-account",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Create sub-account",
+            "role": "button",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "text",
+            "value": "Create sub-account",
+            "role": null,
+            "rationale": "Visible text fallback for buttons/links.",
+            "confidence": 0.4
+          }
+        ]
+      },
+      "value": null,
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "irreversible",
+      "checkpoint": null
+    },
+    {
+      "index": 10,
+      "action": "read",
+      "description": "read 'confirmation_ref' from 'Reference' row",
+      "locator": {
+        "description": "value for 'Reference'",
+        "candidates": [
+          {
+            "strategy": "xpath",
+            "value": "//td[normalize-space()='Reference']/following-sibling::td[1]",
+            "role": null,
+            "rationale": "Anchored on the human-readable row label, not on position or generated markup.",
+            "confidence": 0.8
+          }
+        ]
+      },
+      "value": null,
+      "route": null,
+      "output_name": "confirmation_ref",
+      "key": null,
+      "risk": "safe",
+      "checkpoint": null
+    }
+  ],
+  "success_checkpoint": {
+    "type": "text_present",
+    "expression": "Sub-account created",
+    "locator": null,
+    "description": "confirmation screen reached"
+  },
+  "variants": [],
+  "created_at": "2026-09-16T19:56:54.926579+00:00",
+  "created_by": "discovery-agent",
+  "approval_state": "draft",
+  "discovery_evidence": "evidence/discovery-open_subaccount",
+  "provenance": {
+    "run_id": "evidence/discovery-open_subaccount",
+    "planner": "llm:openai",
+    "model": "gpt-5.6-luna",
+    "flow_sha256": "34568846865a89b4246fa1ab5008a6a7aa64f0e54da2fc64a424b2c7adfdddb8",
+    "curated": true
+  },
+  "stability_score": null
+}

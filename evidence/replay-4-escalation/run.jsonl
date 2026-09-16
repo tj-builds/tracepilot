@@ -1,0 +1,13 @@
+{"seq": 1, "ts": "2026-09-16T19:37:21.927216+00:00", "event": "run_started", "run_kind": "replay"}
+{"seq": 2, "ts": "2026-09-16T19:37:22.625926+00:00", "event": "replay_started", "capability": "lookup_member_balance", "params": {"member_id": "222222", "username": "<redacted>", "password": "<redacted>"}}
+{"seq": 3, "ts": "2026-09-16T19:37:22.897483+00:00", "event": "step", "index": 0, "action": "navigate", "ok": true, "detail": "navigated to http://127.0.0.1:5001", "locator": null, "recovered_from": null}
+{"seq": 4, "ts": "2026-09-16T19:37:22.930567+00:00", "event": "step", "index": 1, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Username", "recovered_from": null}
+{"seq": 5, "ts": "2026-09-16T19:37:22.955517+00:00", "event": "step", "index": 2, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Password", "recovered_from": null}
+{"seq": 6, "ts": "2026-09-16T19:37:23.095911+00:00", "event": "step", "index": 3, "action": "click", "ok": true, "detail": "clicked", "locator": "[1/2:role] Sign in", "recovered_from": null}
+{"seq": 7, "ts": "2026-09-16T19:37:23.120807+00:00", "event": "step", "index": 4, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Member ID", "recovered_from": null}
+{"seq": 8, "ts": "2026-09-16T19:37:23.354628+00:00", "event": "escalation_raised", "request_id": "intv-bb8abc7f", "reason": "An interstitial notice must be acknowledged.", "step": 5, "screenshot": "evidence/replay-4-escalation/007-escalation.png"}
+{"seq": 9, "ts": "2026-09-16T19:37:23.512319+00:00", "event": "handoff_result", "controller": "auto-operator", "resolved": true, "actions": ["click 'Continue' [safe] authorized"]}
+{"seq": 10, "ts": "2026-09-16T19:37:23.564850+00:00", "event": "step", "index": 5, "action": "click", "ok": true, "detail": "human/auto-operator intervened: [\"click 'Continue' [safe] authorized\"]", "locator": "[1/2:role] Search", "recovered_from": "escalation"}
+{"seq": 11, "ts": "2026-09-16T19:37:23.602873+00:00", "event": "step", "index": 6, "action": "read", "ok": true, "detail": "read savings_balance", "locator": "[1/1:xpath] //td[normalize-space()='Savings balance']/following-sibling::td[1]", "recovered_from": null}
+{"seq": 12, "ts": "2026-09-16T19:37:23.611873+00:00", "event": "drift_summary", "targeting_steps": 5, "fallback_steps": 0, "steps": []}
+{"seq": 13, "ts": "2026-09-16T19:37:23.623876+00:00", "event": "run_finished", "outcome": "success", "outputs": {"savings_balance": "$500.00"}}

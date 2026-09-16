@@ -1,0 +1,13 @@
+{"seq": 1, "ts": "2026-09-16T19:58:46.397275+00:00", "event": "run_started", "run_kind": "replay"}
+{"seq": 2, "ts": "2026-09-16T19:58:47.857819+00:00", "event": "replay_started", "capability": "open_subaccount", "params": {"member_id": "100001", "account_type": "savings", "deposit": "100.00", "username": "<redacted>", "password": "<redacted>"}}
+{"seq": 3, "ts": "2026-09-16T19:58:48.442425+00:00", "event": "step", "index": 0, "action": "navigate", "ok": true, "detail": "navigated to http://127.0.0.1:5001", "locator": null, "recovered_from": null}
+{"seq": 4, "ts": "2026-09-16T19:58:48.578612+00:00", "event": "step", "index": 1, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Username", "recovered_from": null}
+{"seq": 5, "ts": "2026-09-16T19:58:48.640082+00:00", "event": "step", "index": 2, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Password", "recovered_from": null}
+{"seq": 6, "ts": "2026-09-16T19:58:48.956998+00:00", "event": "step", "index": 3, "action": "click", "ok": true, "detail": "clicked", "locator": "[1/2:role] Sign in", "recovered_from": null}
+{"seq": 7, "ts": "2026-09-16T19:58:49.008316+00:00", "event": "step", "index": 4, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Member ID", "recovered_from": null}
+{"seq": 8, "ts": "2026-09-16T19:58:49.416260+00:00", "event": "step", "index": 5, "action": "click", "ok": true, "detail": "clicked", "locator": "[1/2:role] Search", "recovered_from": null}
+{"seq": 9, "ts": "2026-09-16T19:58:49.633389+00:00", "event": "step", "index": 6, "action": "click", "ok": true, "detail": "clicked", "locator": "[1/2:role] Open new sub-account", "recovered_from": null}
+{"seq": 10, "ts": "2026-09-16T19:58:49.681228+00:00", "event": "step", "index": 7, "action": "select", "ok": true, "detail": "selected", "locator": "[1/3:role] Account type", "recovered_from": null}
+{"seq": 11, "ts": "2026-09-16T19:58:49.727553+00:00", "event": "step", "index": 8, "action": "type", "ok": true, "detail": "typed", "locator": "[1/3:role] Initial deposit", "recovered_from": null}
+{"seq": 12, "ts": "2026-09-16T19:58:49.743552+00:00", "event": "step", "index": 9, "action": "click", "ok": false, "detail": "blocked: irreversible action blocked by policy", "locator": null, "recovered_from": null}
+{"seq": 13, "ts": "2026-09-16T19:58:49.765965+00:00", "event": "run_finished", "outcome": "blocked_by_policy", "business_code": null, "message": "irreversible action blocked by policy"}

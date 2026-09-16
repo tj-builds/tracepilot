@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0.0",
+  "id": "lookup_member_balance-ae00cb58",
+  "name": "lookup_member_balance",
+  "version": 1,
+  "description": "Look up a member and read their current savings balance.",
+  "goal": "look up member 100001 and read their current savings balance",
+  "target": {
+    "app_signature": "corecu-servicing",
+    "base_url": "http://127.0.0.1:5001",
+    "allowed_routes": [
+      "/",
+      "/login",
+      "/search",
+      "/member",
+      "/member/:member_id",
+      "/member/:member_id/ack",
+      "/member/:member_id/sub-account/new",
+      "/member/:member_id/sub-account/confirm"
+    ]
+  },
+  "params": [
+    {
+      "name": "username",
+      "type": "string",
+      "required": true,
+      "description": "Input parameter 'username'.",
+      "example": null,
+      "sensitive": true
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": true,
+      "description": "Input parameter 'password'.",
+      "example": null,
+      "sensitive": true
+    },
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "description": "Input parameter 'member_id'.",
+      "example": "100001",
+      "sensitive": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "savings_balance",
+      "type": "string",
+      "description": "Extracted value for savings_balance.",
+      "source_step": 6
+    }
+  ],
+  "steps": [
+    {
+      "index": 0,
+      "action": "navigate",
+      "description": "navigate to http://127.0.0.1:5001",
+      "locator": null,
+      "value": null,
+      "route": "http://127.0.0.1:5001",
+      "output_name": null,
+      "key": null,
+      "risk": "safe",
+      "checkpoint": null
+    },
+    {
+      "index": 1,
+      "action": "type",
+      "description": "type into 'Username'",
+      "locator": {
+        "description": "Username",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Username",
+            "role": "textbox",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "label",
+            "value": "Username",
+            "role": null,
+            "rationale": "Associated <label> text; stable for form fields.",
+            "confidence": 0.8
+          },
+          {
+            "strategy": "css",
+            "value": "#u",
+            "role": null,
+            "rationale": "Element id; brittle if ids are generated, so ranked below semantic strategies.",
+            "confidence": 0.5
+          }
+        ]
+      },
+      "value": "{{username}}",
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "reversible",
+      "checkpoint": null
+    },
+    {
+      "index": 2,
+      "action": "type",
+      "description": "type into 'Password'",
+      "locator": {
+        "description": "Password",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Password",
+            "role": "textbox",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "label",
+            "value": "Password",
+            "role": null,
+            "rationale": "Associated <label> text; stable for form fields.",
+            "confidence": 0.8
+          },
+          {
+            "strategy": "css",
+            "value": "#pw",
+            "role": null,
+            "rationale": "Element id; brittle if ids are generated, so ranked below semantic strategies.",
+            "confidence": 0.5
+          }
+        ]
+      },
+      "value": "{{password}}",
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "reversible",
+      "checkpoint": null
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "description": "click 'Sign in'",
+      "locator": {
+        "description": "Sign in",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Sign in",
+            "role": "button",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "text",
+            "value": "Sign in",
+            "role": null,
+            "rationale": "Visible text fallback for buttons/links.",
+            "confidence": 0.4
+          }
+        ]
+      },
+      "value": null,
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "safe",
+      "checkpoint": null
+    },
+    {
+      "index": 4,
+      "action": "type",
+      "description": "type into 'Member ID'",
+      "locator": {
+        "description": "Member ID",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Member ID",
+            "role": "textbox",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "label",
+            "value": "Member ID",
+            "role": null,
+            "rationale": "Associated <label> text; stable for form fields.",
+            "confidence": 0.8
+          },
+          {
+            "strategy": "css",
+            "value": "#mid",
+            "role": null,
+            "rationale": "Element id; brittle if ids are generated, so ranked below semantic strategies.",
+            "confidence": 0.5
+          }
+        ]
+      },
+      "value": "{{member_id}}",
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "reversible",
+      "checkpoint": null
+    },
+    {
+      "index": 5,
+      "action": "click",
+      "description": "click 'Search'",
+      "locator": {
+        "description": "Search",
+        "candidates": [
+          {
+            "strategy": "role",
+            "value": "Search",
+            "role": "button",
+            "rationale": "Accessibility role + accessible name; survives markup churn and maps onto the a11y tree (works on desktop too).",
+            "confidence": 0.9
+          },
+          {
+            "strategy": "text",
+            "value": "Search",
+            "role": null,
+            "rationale": "Visible text fallback for buttons/links.",
+            "confidence": 0.4
+          }
+        ]
+      },
+      "value": null,
+      "route": null,
+      "output_name": null,
+      "key": null,
+      "risk": "reversible",
+      "checkpoint": null
+    },
+    {
+      "index": 6,
+      "action": "read",
+      "description": "read 'savings_balance' from 'Savings balance' row",
+      "locator": {
+        "description": "value for 'Savings balance'",
+        "candidates": [
+          {
+            "strategy": "xpath",
+            "value": "//td[normalize-space()='Savings balance']/following-sibling::td[1]",
+            "role": null,
+            "rationale": "Anchored on the human-readable row label, not on position or generated markup.",
+            "confidence": 0.8
+          }
+        ]
+      },
+      "value": null,
+      "route": null,
+      "output_name": "savings_balance",
+      "key": null,
+      "risk": "safe",
+      "checkpoint": null
+    }
+  ],
+  "success_checkpoint": {
+    "type": "text_present",
+    "expression": "Savings balance",
+    "locator": null,
+    "description": "member detail with savings balance visible"
+  },
+  "variants": [],
+  "created_at": "2026-09-16T19:32:02.088367+00:00",
+  "created_by": "discovery-agent",
+  "approval_state": "approved",
+  "discovery_evidence": "evidence/discovery-lookup_member_balance",
+  "provenance": {
+    "run_id": "evidence/discovery-lookup_member_balance",
+    "planner": "llm:openai",
+    "model": "gpt-5.6-luna",
+    "flow_sha256": "f1cd49429c0782adac123eeb4d5e0d89a7c7dc8fb5d061963c5d115367aec746",
+    "curated": true
+  },
+  "stability_score": 1.0
+}

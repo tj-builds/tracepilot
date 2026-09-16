@@ -1,0 +1,20 @@
+{
+  "capability": "lookup_member_balance",
+  "runs": 5,
+  "tenant": null,
+  "pass_rate": 1.0,
+  "outcomes": [
+    "success",
+    "success",
+    "success",
+    "success",
+    "success"
+  ],
+  "latency_ms": {
+    "min": 713,
+    "median": 746,
+    "max": 879
+  },
+  "runs_using_fallback": 0,
+  "approval_state": "approved"
+}

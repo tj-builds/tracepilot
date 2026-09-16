@@ -1,0 +1,28 @@
+{"seq": 1, "ts": "2026-09-16T19:41:26.544555+00:00", "event": "run_started", "run_kind": "discovery"}
+{"seq": 2, "ts": "2026-09-16T19:41:27.295154+00:00", "event": "goal", "goal": "open a new sub-account for member 100001 and reach the confirmation screen", "capability": "open_subaccount", "planner": "llm:openai"}
+{"seq": 3, "ts": "2026-09-16T19:41:27.658919+00:00", "event": "observe", "url": "http://127.0.0.1:5001/login", "title": "CoreCU Servicing", "n_controls": 3}
+{"seq": 4, "ts": "2026-09-16T19:41:32.233059+00:00", "event": "decide", "action": "type", "ref": "e0", "reason": "Enter the provided operator username.", "risk": "safe"}
+{"seq": 5, "ts": "2026-09-16T19:41:32.278267+00:00", "event": "observe", "url": "http://127.0.0.1:5001/login", "title": "CoreCU Servicing", "n_controls": 3}
+{"seq": 6, "ts": "2026-09-16T19:41:34.734619+00:00", "event": "decide", "action": "type", "ref": "e1", "reason": "Enter the provided operator password.", "risk": "safe"}
+{"seq": 7, "ts": "2026-09-16T19:41:34.801820+00:00", "event": "observe", "url": "http://127.0.0.1:5001/login", "title": "CoreCU Servicing", "n_controls": 3}
+{"seq": 8, "ts": "2026-09-16T19:41:37.747988+00:00", "event": "decide", "action": "click", "ref": "e2", "reason": "Sign in to access the member servicing console.", "risk": "safe"}
+{"seq": 9, "ts": "2026-09-16T19:41:38.019955+00:00", "event": "observe", "url": "http://127.0.0.1:5001/search", "title": "CoreCU Servicing", "n_controls": 2}
+{"seq": 10, "ts": "2026-09-16T19:41:42.545154+00:00", "event": "decide", "action": "type", "ref": "#e0", "reason": "Enter the provided member ID for lookup.", "risk": "safe"}
+{"seq": 11, "ts": "2026-09-16T19:41:42.622593+00:00", "event": "observe", "url": "http://127.0.0.1:5001/search", "title": "CoreCU Servicing", "n_controls": 2}
+{"seq": 12, "ts": "2026-09-16T19:41:45.901984+00:00", "event": "decide", "action": "click", "ref": "e1", "reason": "Search for member 100001 to begin opening the sub-account.", "risk": "safe"}
+{"seq": 13, "ts": "2026-09-16T19:41:46.132831+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001", "title": "CoreCU Servicing", "n_controls": 1}
+{"seq": 14, "ts": "2026-09-16T19:41:49.185384+00:00", "event": "decide", "action": "click", "ref": "e0", "reason": "Open the new sub-account form for member 100001.", "risk": "safe"}
+{"seq": 15, "ts": "2026-09-16T19:41:49.485821+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001/sub-account/new", "title": "CoreCU Servicing", "n_controls": 3}
+{"seq": 16, "ts": "2026-09-16T19:41:59.418983+00:00", "event": "decide", "action": "select", "ref": "#e0", "reason": "Select the requested savings account type.", "risk": "safe"}
+{"seq": 17, "ts": "2026-09-16T19:41:59.478581+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001/sub-account/new", "title": "CoreCU Servicing", "n_controls": 3}
+{"seq": 18, "ts": "2026-09-16T19:42:08.370961+00:00", "event": "decide", "action": "type", "ref": "#e1", "reason": "Enter the provided initial deposit amount.", "risk": "reversible"}
+{"seq": 19, "ts": "2026-09-16T19:42:08.407156+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001/sub-account/new", "title": "CoreCU Servicing", "n_controls": 3}
+{"seq": 20, "ts": "2026-09-16T19:42:25.744585+00:00", "event": "decide", "action": "click", "ref": "e2", "reason": "Create the new savings sub-account with the entered $100.00 initial deposit.", "risk": "irreversible"}
+{"seq": 21, "ts": "2026-09-16T19:42:25.747570+00:00", "event": "irreversible_confirmed", "control": "Create sub-account"}
+{"seq": 22, "ts": "2026-09-16T19:42:25.880730+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001/sub-account/confirm", "title": "CoreCU Servicing", "n_controls": 0}
+{"seq": 23, "ts": "2026-09-16T19:42:35.182711+00:00", "event": "decide", "action": "read", "ref": null, "reason": "Extract the confirmation reference shown on the completed sub-account screen.", "risk": "safe"}
+{"seq": 24, "ts": "2026-09-16T19:42:35.191013+00:00", "event": "read", "output": "confirmation_ref", "value": "SA-100001-32458"}
+{"seq": 25, "ts": "2026-09-16T19:42:35.213289+00:00", "event": "observe", "url": "http://127.0.0.1:5001/member/100001/sub-account/confirm", "title": "CoreCU Servicing", "n_controls": 0}
+{"seq": 1, "ts": "2026-09-16T19:50:34.516700+00:00", "event": "run_started", "run_kind": "discovery"}
+{"seq": 2, "ts": "2026-09-16T19:50:36.027842+00:00", "event": "goal", "goal": "open a new sub-account for member 100001 and reach the confirmation screen", "capability": "open_subaccount", "planner": "llm:openai"}
+{"seq": 3, "ts": "2026-09-16T19:50:36.537328+00:00", "event": "observe", "url": "http://127.0.0.1:5001/login", "title": "CoreCU Servicing", "n_controls": 3}

@@ -1,0 +1,125 @@
+{
+  "outcome": "blocked_by_policy",
+  "artifact_id": "open_subaccount-e4263016",
+  "artifact_version": 1,
+  "outputs": {},
+  "business_code": null,
+  "missing_inputs": [],
+  "message": "irreversible action blocked by policy",
+  "failed_step": null,
+  "expected": null,
+  "observed": null,
+  "steps": [
+    {
+      "step_index": 0,
+      "action": "navigate",
+      "ok": true,
+      "detail": "navigated to http://127.0.0.1:5001",
+      "locator_used": null,
+      "rung": null,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 569
+    },
+    {
+      "step_index": 1,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Username",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 97
+    },
+    {
+      "step_index": 2,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Password",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 42
+    },
+    {
+      "step_index": 3,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Sign in",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 291
+    },
+    {
+      "step_index": 4,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Member ID",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 33
+    },
+    {
+      "step_index": 5,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Search",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 384
+    },
+    {
+      "step_index": 6,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Open new sub-account",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 199
+    },
+    {
+      "step_index": 7,
+      "action": "select",
+      "ok": true,
+      "detail": "selected",
+      "locator_used": "[1/3:role] Account type",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 32
+    },
+    {
+      "step_index": 8,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Initial deposit",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 28
+    },
+    {
+      "step_index": 9,
+      "action": "click",
+      "ok": false,
+      "detail": "blocked: irreversible action blocked by policy",
+      "locator_used": null,
+      "rung": null,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 0
+    }
+  ],
+  "evidence": {}
+}

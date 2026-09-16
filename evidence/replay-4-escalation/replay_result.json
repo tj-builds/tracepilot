@@ -1,0 +1,96 @@
+{
+  "outcome": "success",
+  "artifact_id": "lookup_member_balance-ae00cb58",
+  "artifact_version": 1,
+  "outputs": {
+    "savings_balance": "$500.00"
+  },
+  "business_code": null,
+  "missing_inputs": [],
+  "message": "checkpoint verified; goal reached",
+  "failed_step": null,
+  "expected": null,
+  "observed": null,
+  "steps": [
+    {
+      "step_index": 0,
+      "action": "navigate",
+      "ok": true,
+      "detail": "navigated to http://127.0.0.1:5001",
+      "locator_used": null,
+      "rung": null,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 262
+    },
+    {
+      "step_index": 1,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Username",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 24
+    },
+    {
+      "step_index": 2,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Password",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 16
+    },
+    {
+      "step_index": 3,
+      "action": "click",
+      "ok": true,
+      "detail": "clicked",
+      "locator_used": "[1/2:role] Sign in",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 131
+    },
+    {
+      "step_index": 4,
+      "action": "type",
+      "ok": true,
+      "detail": "typed",
+      "locator_used": "[1/3:role] Member ID",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 17
+    },
+    {
+      "step_index": 5,
+      "action": "click",
+      "ok": true,
+      "detail": "human/auto-operator intervened: [\"click 'Continue' [safe] authorized\"]",
+      "locator_used": "[1/2:role] Search",
+      "rung": 0,
+      "used_fallback": false,
+      "recovered_from": "escalation",
+      "duration_ms": 436
+    },
+    {
+      "step_index": 6,
+      "action": "read",
+      "ok": true,
+      "detail": "read savings_balance",
+      "locator_used": "[1/1:xpath] //td[normalize-space()='Savings balance']/following-sibling::td[1]",
+      "rung": null,
+      "used_fallback": false,
+      "recovered_from": null,
+      "duration_ms": 22
+    }
+  ],
+  "evidence": {
+    "escalation_request": "intv-bb8abc7f"
+  }
+}
